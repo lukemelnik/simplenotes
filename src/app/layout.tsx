@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="bg-black h-screen">
+        <div className="bg-black min-h-screen text-slate-200">
           <Nav />
           {children}
         </div>
