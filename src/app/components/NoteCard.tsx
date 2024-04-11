@@ -4,6 +4,8 @@
 
 import React from "react";
 import deleteNote from "../actions/deleteNote";
+import { redirect } from "next/navigation";
+import editNote from "../actions/editNote";
 
 type NoteProps = {
   note: {
@@ -26,7 +28,13 @@ export default function NoteCard({ note }: NoteProps) {
         X
       </button>
       <h3 className="font-bold text-lg">{note.title}</h3>
-      <p>{note.content}</p>
+      <p className="mb-5">{note.content}</p>
+      <button
+        className="absolute right-5 bottom-5 bg-gray-950 text-gray-300 px-3 py-1 rounded"
+        onClick={async () => editNote(note.id)}
+      >
+        Edit
+      </button>
     </div>
   );
 }
