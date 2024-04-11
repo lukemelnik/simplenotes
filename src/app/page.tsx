@@ -18,7 +18,7 @@ export default async function Home() {
       </Container>
       <Container>
         <div className="mt-5">
-          <h1 className="text-3xl font-bold mb-3">
+          <h1 className="text-3xl font-bold mb-5">
             Hey Luke, here are your notes:
           </h1>
           <div className="grid grid-cols-2 gap-4">

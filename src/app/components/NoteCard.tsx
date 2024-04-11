@@ -21,7 +21,7 @@ export default function NoteCard({ note }: NoteProps) {
     >
       <button
         onClick={() => deleteNote(note.id)}
-        className="text-xl font-bold absolute right-5 top-5"
+        className="text-xl font-bold absolute right-5 top-5 hover:text-red-600"
       >
         X
       </button>
