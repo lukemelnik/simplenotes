@@ -7,9 +7,10 @@ import { redirect } from "next/navigation";
 import createNote from "./actions/createNote";
 import NewNoteForm from "./components/NewNoteForm";
 import NoteCard from "./components/NoteCard";
+import getNotes from "./actions/getNotes";
 
 export default async function Home() {
-  const notes = await db.note.findMany();
+  const notes = await getNotes();
 
   return (
     <>
